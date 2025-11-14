@@ -41,6 +41,8 @@ class Program
        // string text = GetMiddleChar("armud");
        // string text2 = GetMiddleChar("portagal");
        // Console.WriteLine($"{text} {text2}");
+       // int result=OddNumSum(2347);
+       // Console.WriteLine(result);
 
 
 
@@ -253,5 +255,16 @@ class Program
             return str[middle].ToString();
     }
     // TASK 9
-    
+    public static int OddNumSum(int n)
+    {
+        int sum = 0;
+        while (n>0)
+        {
+            int digit = n % 10;
+            if (digit == 2 || digit == 3 || digit == 5 || digit == 7)
+                sum += digit;
+            n /= 10;
+        }
+        return sum;
+    }
 }
